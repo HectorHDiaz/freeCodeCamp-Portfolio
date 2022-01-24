@@ -7,6 +7,11 @@
   font-family: 'Poppins';
 }
 
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 #nav-bar {
   background-color: white;
   width: 100%;
@@ -62,7 +67,52 @@ section > div {
   margin: 1em 0 1em 0;
 }
 
-.knowledge {
+#welcome-section {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: darkslategray;
+}
+
+#info-section {
+  padding-top: 4em;
+  background-image: url("https://i.imgur.com/DUuy2W5.jpg");
+}
+
+#info-section .estudios .titulos .certificados .carousel__item {
+  padding: 1em;
+  display: none;
+}
+
+#info-section .estudios .titulos .certificados .carousel__item img {
+  width: 70vw;
+}
+
+#info-section .estudios .titulos .certificados .carousel__item--selected {
+  display: block;
+}
+
+#info-section .estudios .titulos .certificados .carousel__nav {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+#info-section .estudios .titulos .certificados .carousel__button {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#info-section .estudios .titulos .certificados .carousel__button--selected {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#info-section #knowledge {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,17 +122,17 @@ section > div {
           flex-direction: column;
 }
 
-.knowDiv h3 {
+#info-section #knowledge .knowDiv h3 {
   margin-bottom: 1em;
 }
 
-.knowDiv p {
+#info-section #knowledge .knowDiv p {
   font-size: 1em;
   font-weight: 500;
   margin-bottom: 1em;
 }
 
-.knowContainer {
+#info-section #knowledge .knowDiv .knowContainer {
   margin: 0.5em 0 1.5em 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,30 +147,17 @@ section > div {
       flex-wrap: wrap;
 }
 
-.knowCards {
+#info-section #knowledge .knowDiv .knowContainer .knowCards {
   width: 50%;
   margin-bottom: 1em;
 }
 
-.knowCards img {
+#info-section #knowledge .knowDiv .knowContainer .knowCards img {
   width: 50px;
 }
 
-#welcome-section {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: darkslategray;
-}
-
-#info-section {
-  background-color: darkred;
-  padding-top: 4em;
-  background-image: url("./media/knowledge.jpg");
-}
-
 #projects-section {
-  background-image: url("./media/projects.jpg");
+  background-image: url("https://i.imgur.com/uLjLpf5.jpg");
 }
 
 #projects-section h3 {
@@ -137,6 +174,30 @@ section > div {
 }
 
 #contact-section {
-  background-image: url("./media/contacto.jpg");
+  background-image: url("https://i.imgur.com/XoWGuWc.jpg");
+}
+
+#contact-section .knowContainer {
+  margin: 0.5em 0 1.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact-section .knowContainer .knowCards {
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+#contact-section .knowContainer .knowCards img {
+  width: 50px;
 }
 /*# sourceMappingURL=style.css.map */
