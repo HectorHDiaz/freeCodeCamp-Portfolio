@@ -13,6 +13,7 @@
 }
 
 #nav-bar {
+  z-index: 3;
   background-color: white;
   width: 100%;
   position: fixed;
@@ -79,12 +80,16 @@ section > div {
   background-image: url("https://i.imgur.com/DUuy2W5.jpg");
 }
 
-#info-section .estudios .titulos .certificados .carousel__item {
-  padding: 1em;
-  display: none;
+#info-section .estudios .titulos .certificados img {
+  width: 70vw;
 }
 
-#info-section .estudios .titulos .certificados .carousel__item img {
+#info-section .estudios .titulos .certificados .carousel {
+  position: relative;
+}
+
+#info-section .estudios .titulos .certificados .carousel__item {
+  display: none;
   width: 70vw;
 }
 
@@ -94,22 +99,50 @@ section > div {
 
 #info-section .estudios .titulos .certificados .carousel__nav {
   width: 100%;
+  position: absolute;
   bottom: 0;
   left: 0;
 }
 
 #info-section .estudios .titulos .certificados .carousel__button {
   width: 10px;
-  height: 10px;
+  height: 2px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
 }
 
 #info-section .estudios .titulos .certificados .carousel__button--selected {
   background: rgba(255, 255, 255, 0.8);
+}
+
+#info-section .estudios .titulos .certificados .carousel-button {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  border: none;
+  padding: 0 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#info-section .estudios .titulos .certificados .carousel-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#info-section .estudios .titulos .certificados .carousel-button.prev {
+  left: 0;
+}
+
+#info-section .estudios .titulos .certificados .carousel-button.next {
+  right: 0;
 }
 
 #info-section #knowledge {
