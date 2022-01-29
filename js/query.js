@@ -6,7 +6,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
 
   carousel.insertAdjacentHTML(
     "beforeend",
-    `
+    ` 
         <div class="carousel__nav">
             ${buttonsHtml.join("")}
         </div>
