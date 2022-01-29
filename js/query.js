@@ -40,7 +40,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
       itemsIndex++
     if(itemsIndex > items.length-1){
       itemsIndex = 0
-    }
+    } 
       items[itemsIndex].classList.add("carousel__item--selected")
       buttons[itemsIndex].classList.add("carousel__button--selected");
     
