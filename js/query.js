@@ -45,7 +45,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
         buttons[itemsIndex].classList.add("carousel__button--selected");
       
     })
-    
+     
     buttons.forEach((button, i) => {
       button.addEventListener("click", () => {
         // un-select all the items
